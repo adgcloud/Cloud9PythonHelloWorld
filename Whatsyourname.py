@@ -6,7 +6,7 @@
 #  1. STRING first
 #  2. STRING last
 #
-#test
+#testing
 def print_full_name(first, last):
   print("Hello " + first + " " + last + "! You just delved into python.")
 
