@@ -1,0 +1,11 @@
+alist = []
+alist.append("S3")
+alist.append("EC2")
+alist.append("Lambda")
+alist.append("DynamoDB")
+alist.append("Cloudfront")
+alist.append("Elasticache")
+print(alist, len(alist))
+alist.pop(1)
+alist.pop(0)
+print(alist, len(alist))
