@@ -1,6 +1,9 @@
 #!/usr/bin/env python3.7
 from random import *
 
+def uniqueNames():
+    
+
 
 deptchars = input("What is the name of your department? : ")
 deptprompt = deptchars.lower()
@@ -14,3 +17,6 @@ else:
 for i in range(instanceprompt):
     char = random()
     print("Unique instance name:", deptprompt + str(char))
+
+if __name__ == "__uniqueNames__":
+    uniqueNames()
