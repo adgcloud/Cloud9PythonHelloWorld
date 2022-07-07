@@ -7,5 +7,8 @@ for instance in ec2.instances.all():
     if instance.id == "i-0c870707a894bbc1a":
         print("cloud9instance", ec2.Instance(instance.id),instance.id)
     else:
-        print("not cloud9 instance", ec2.Instance(instance.id),instance.id)
+        #if instance.tag == ""
+        print("not cloud9 instance", ec2.Instance(instance.id),instance.id, instance.tags)
         #ec2.Instance(instance.id).stop()
+    #else:
+        #print("the rest")
