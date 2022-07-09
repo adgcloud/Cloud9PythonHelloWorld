@@ -307,3 +307,312 @@ DEBUG:botocore.parsers:Response body:
 b'{"SourceLanguageCode":"en","TargetLanguageCode":"fr","TranslatedText":"Et les cr\xc3\xa9ateurs de jeux vid\xc3\xa9o utilisent le cloud pour proposer des jeux en ligne \xc3\xa0 des millions de joueurs dans le monde entier."}'
 DEBUG:botocore.hooks:Event needs-retry.translate.TranslateText: calling handler <botocore.retryhandler.RetryHandler object at 0x7f1a56f8b0d0>
 DEBUG:botocore.retryhandler:No retry needed.
+INFO:root:The SourceLanguageCode and TargetLanguageCode are valid - proceeding
+DEBUG:botocore.hooks:Changing event name from creating-client-class.iot-data to creating-client-class.iot-data-plane
+DEBUG:botocore.hooks:Changing event name from before-call.apigateway to before-call.api-gateway
+DEBUG:botocore.hooks:Changing event name from request-created.machinelearning.Predict to request-created.machine-learning.Predict
+DEBUG:botocore.hooks:Changing event name from before-parameter-build.autoscaling.CreateLaunchConfiguration to before-parameter-build.auto-scaling.CreateLaunchConfiguration
+DEBUG:botocore.hooks:Changing event name from before-parameter-build.route53 to before-parameter-build.route-53
+DEBUG:botocore.hooks:Changing event name from request-created.cloudsearchdomain.Search to request-created.cloudsearch-domain.Search
+DEBUG:botocore.hooks:Changing event name from docs.*.autoscaling.CreateLaunchConfiguration.complete-section to docs.*.auto-scaling.CreateLaunchConfiguration.complete-section
+DEBUG:botocore.hooks:Changing event name from before-parameter-build.logs.CreateExportTask to before-parameter-build.cloudwatch-logs.CreateExportTask
+DEBUG:botocore.hooks:Changing event name from docs.*.logs.CreateExportTask.complete-section to docs.*.cloudwatch-logs.CreateExportTask.complete-section
+DEBUG:botocore.hooks:Changing event name from before-parameter-build.cloudsearchdomain.Search to before-parameter-build.cloudsearch-domain.Search
+DEBUG:botocore.hooks:Changing event name from docs.*.cloudsearchdomain.Search.complete-section to docs.*.cloudsearch-domain.Search.complete-section
+DEBUG:botocore.utils:IMDS ENDPOINT: http://169.254.169.254/
+DEBUG:botocore.credentials:Looking for credentials via: env
+DEBUG:botocore.credentials:Looking for credentials via: assume-role
+DEBUG:botocore.credentials:Looking for credentials via: assume-role-with-web-identity
+DEBUG:botocore.credentials:Looking for credentials via: sso
+DEBUG:botocore.credentials:Looking for credentials via: shared-credentials-file
+INFO:botocore.credentials:Found credentials in shared credentials file: ~/.aws/credentials
+DEBUG:botocore.loaders:Loading JSON file: /home/ec2-user/.local/lib/python3.7/site-packages/botocore/data/endpoints.json
+DEBUG:botocore.loaders:Loading JSON file: /home/ec2-user/.local/lib/python3.7/site-packages/botocore/data/sdk-default-configuration.json
+DEBUG:botocore.hooks:Event choose-service-name: calling handler <function handle_service_name_alias at 0x7f404702d320>
+DEBUG:botocore.loaders:Loading JSON file: /home/ec2-user/.local/lib/python3.7/site-packages/botocore/data/translate/2017-07-01/service-2.json
+DEBUG:botocore.hooks:Event creating-client-class.translate: calling handler <function add_generate_presigned_url at 0x7f40474dbb00>
+DEBUG:botocore.endpoint:Setting translate timeout as (60, 60)
+DEBUG:botocore.loaders:Loading JSON file: /home/ec2-user/.local/lib/python3.7/site-packages/botocore/data/_retry.json
+DEBUG:botocore.client:Registering retry handlers for service: translate
+DEBUG:botocore.hooks:Event before-parameter-build.translate.TranslateText: calling handler <function generate_idempotent_uuid at 0x7f4046d9ecb0>
+DEBUG:botocore.hooks:Event before-call.translate.TranslateText: calling handler <function add_recursion_detection_header at 0x7f4046d9d9e0>
+DEBUG:botocore.hooks:Event before-call.translate.TranslateText: calling handler <function inject_api_version_header_if_needed at 0x7f4046da6560>
+DEBUG:botocore.endpoint:Making request for OperationModel(name=TranslateText) with params: {'url_path': '/', 'query_string': '', 'method': 'POST', 'headers': {'X-Amz-Target': 'AWSShineFrontendService_20170701.TranslateText', 'Content-Type': 'application/x-amz-json-1.1', 'User-Agent': 'Boto3/1.24.22 Python/3.7.10 Linux/4.14.281-212.502.amzn2.x86_64 Botocore/1.27.22'}, 'body': b'{"Text": "What is cloud computing?", "SourceLanguageCode": "en", "TargetLanguageCode": "fr"}', 'url': 'https://translate.us-east-1.amazonaws.com/', 'context': {'client_region': 'us-east-1', 'client_config': <botocore.config.Config object at 0x7f4046b9de90>, 'has_streaming_input': False, 'auth_type': None}}
+DEBUG:botocore.hooks:Event request-created.translate.TranslateText: calling handler <bound method RequestSigner.handler of <botocore.signers.RequestSigner object at 0x7f4046b9df50>>
+DEBUG:botocore.hooks:Event choose-signer.translate.TranslateText: calling handler <function set_operation_specific_signer at 0x7f4046d9eb90>
+DEBUG:botocore.auth:Calculating signature using v4 auth.
+DEBUG:botocore.auth:CanonicalRequest:
+POST
+/
+
+content-type:application/x-amz-json-1.1
+host:translate.us-east-1.amazonaws.com
+x-amz-date:20220709T182750Z
+x-amz-security-token:IQoJb3JpZ2luX2VjEOP//////////wEaCXVzLWVhc3QtMSJHMEUCIQCxofSaFN/uqrHBPR+1xfgxnF9o5sNJL6alqSSqxuOW5wIgItHaJ137+KQpQFeKULHbbrZIhfWvEj5eS3X0Y5y9+Bgq6gMIHBAAGgw0MjAzNDEzODE0NDkiDEgGSe2JJLyhgHrl4CrHAxaZisfJ8pVEWI1u/kxpxe2i8Y+7mcXGJ+rQoSxMEHziLjEksw0GaI9sV4XG8t8zmiIe7Qp4ccw8h6WHEjnYNnGFeDxJDEavYONDizK8tlO9aJ3axEs126uNkYZObOmyus064yUqzsr5y9qnMQ4rpkmbeeGflWGrRvdu/NMSCNEt/5GiBE1N65cn9goskbdi5m3Gbp1eFj0keC/nO5DvHNGmklsv7K4oZSawKLA+StDSrAZ/ff5fbBwv1I8t+svXnAbuRO0rjFkbSHnTzRSsyzxU/TawI3AwuMQxox263baUSLkzNk/8qJ8JD6Ce877wranlBUEQoS31M5Th17IHtkOpzNcvSFm7sFo77s/H+oB4I8QqVGP1hQgdB7VK2GjSzCO+K5RzK476tRrdDsec5vFCC92nEoaR+d0Jn4D0i7ZXoMExSm8Sqs1u8Ngsj9L8k3arVVGtpNCXlN7log7SSC792/DdSOV+QxLLrtV2ffBgM4A41CXD1KXyNSYpMES8pUs0Us8kLxa/BRvehb7sophrRCgqUEdOzcCt0bbBpYSRSENvtZHDKpVyUO06tzU2mNjhE0jFDWHUY3cNYuIQdCMKVucjp28iMI/dppYGOpICQvmC5bMhfRkc7Z8mUhKVc/aaWqBtRr9W8Uk/SDkAEPQcsTXQWG5cslKkEAxRlyZ0qSHSw/8I9NAzwoBk8+2vqOe/bh1Mqgp5Or16ZzqmjrLqSl+XaSc8KbKUGGgjaVG8RE+QMqR17M2i42hxGOb7da3B8vdSRHekffDd1ZWF7PFFw88DQoXJI3FdjXFAuzgZ9yS36oRYdt8muMs1fyVfPJBzrPcbm3g0/ysFhAsqX6+1pSVztPGPS3QijbHO2W7OVXycZhz3QGb6e1W3mSBvNdExPC5HBd3ZYzfADu13Gq0E434Zmz5ubaogvrnCCioNL9ygfMmo8HmAtor7SEF5kTqbmQPiQkIDmQY8/hVpEAEsFw==
+x-amz-target:AWSShineFrontendService_20170701.TranslateText
+
+content-type;host;x-amz-date;x-amz-security-token;x-amz-target
+4df92d52495f3b15db9c144f74816da9a6d8e8b81f87a7767da34d64f8f433c8
+DEBUG:botocore.auth:StringToSign:
+AWS4-HMAC-SHA256
+20220709T182750Z
+20220709/us-east-1/translate/aws4_request
+2d7df80b633a51c8f2a3f059928aafb6445c1d68a871671a3538d835a7b0df3b
+DEBUG:botocore.auth:Signature:
+fd2ace1c7d95402b860f180551e28dfc974234f4426f20b0a5e4a32edc17c91c
+DEBUG:botocore.hooks:Event request-created.translate.TranslateText: calling handler <function add_retry_headers at 0x7f4046da6c20>
+DEBUG:botocore.endpoint:Sending http request: <AWSPreparedRequest stream_output=False, method=POST, url=https://translate.us-east-1.amazonaws.com/, headers={'X-Amz-Target': b'AWSShineFrontendService_20170701.TranslateText', 'Content-Type': b'application/x-amz-json-1.1', 'User-Agent': b'Boto3/1.24.22 Python/3.7.10 Linux/4.14.281-212.502.amzn2.x86_64 Botocore/1.27.22', 'X-Amz-Date': b'20220709T182750Z', 'X-Amz-Security-Token': b'IQoJb3JpZ2luX2VjEOP//////////wEaCXVzLWVhc3QtMSJHMEUCIQCxofSaFN/uqrHBPR+1xfgxnF9o5sNJL6alqSSqxuOW5wIgItHaJ137+KQpQFeKULHbbrZIhfWvEj5eS3X0Y5y9+Bgq6gMIHBAAGgw0MjAzNDEzODE0NDkiDEgGSe2JJLyhgHrl4CrHAxaZisfJ8pVEWI1u/kxpxe2i8Y+7mcXGJ+rQoSxMEHziLjEksw0GaI9sV4XG8t8zmiIe7Qp4ccw8h6WHEjnYNnGFeDxJDEavYONDizK8tlO9aJ3axEs126uNkYZObOmyus064yUqzsr5y9qnMQ4rpkmbeeGflWGrRvdu/NMSCNEt/5GiBE1N65cn9goskbdi5m3Gbp1eFj0keC/nO5DvHNGmklsv7K4oZSawKLA+StDSrAZ/ff5fbBwv1I8t+svXnAbuRO0rjFkbSHnTzRSsyzxU/TawI3AwuMQxox263baUSLkzNk/8qJ8JD6Ce877wranlBUEQoS31M5Th17IHtkOpzNcvSFm7sFo77s/H+oB4I8QqVGP1hQgdB7VK2GjSzCO+K5RzK476tRrdDsec5vFCC92nEoaR+d0Jn4D0i7ZXoMExSm8Sqs1u8Ngsj9L8k3arVVGtpNCXlN7log7SSC792/DdSOV+QxLLrtV2ffBgM4A41CXD1KXyNSYpMES8pUs0Us8kLxa/BRvehb7sophrRCgqUEdOzcCt0bbBpYSRSENvtZHDKpVyUO06tzU2mNjhE0jFDWHUY3cNYuIQdCMKVucjp28iMI/dppYGOpICQvmC5bMhfRkc7Z8mUhKVc/aaWqBtRr9W8Uk/SDkAEPQcsTXQWG5cslKkEAxRlyZ0qSHSw/8I9NAzwoBk8+2vqOe/bh1Mqgp5Or16ZzqmjrLqSl+XaSc8KbKUGGgjaVG8RE+QMqR17M2i42hxGOb7da3B8vdSRHekffDd1ZWF7PFFw88DQoXJI3FdjXFAuzgZ9yS36oRYdt8muMs1fyVfPJBzrPcbm3g0/ysFhAsqX6+1pSVztPGPS3QijbHO2W7OVXycZhz3QGb6e1W3mSBvNdExPC5HBd3ZYzfADu13Gq0E434Zmz5ubaogvrnCCioNL9ygfMmo8HmAtor7SEF5kTqbmQPiQkIDmQY8/hVpEAEsFw==', 'Authorization': b'AWS4-HMAC-SHA256 Credential=ASIAWDXSMPFERDZ5MVM7/20220709/us-east-1/translate/aws4_request, SignedHeaders=content-type;host;x-amz-date;x-amz-security-token;x-amz-target, Signature=fd2ace1c7d95402b860f180551e28dfc974234f4426f20b0a5e4a32edc17c91c', 'amz-sdk-invocation-id': b'd54deaf2-0e85-45c6-b5dc-f7e539dfd99a', 'amz-sdk-request': b'attempt=1', 'Content-Length': '92'}>
+DEBUG:botocore.httpsession:Certificate path: /home/ec2-user/.local/lib/python3.7/site-packages/botocore/cacert.pem
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): translate.us-east-1.amazonaws.com:443
+DEBUG:urllib3.connectionpool:https://translate.us-east-1.amazonaws.com:443 "POST / HTTP/1.1" 200 108
+DEBUG:botocore.parsers:Response headers: {'x-amzn-RequestId': 'be589e20-de05-4442-965f-c2268e628843', 'Cache-Control': 'no-cache', 'Content-Type': 'application/x-amz-json-1.1', 'Content-Length': '108', 'Date': 'Sat, 09 Jul 2022 18:27:51 GMT'}
+DEBUG:botocore.parsers:Response body:
+b'{"SourceLanguageCode":"en","TargetLanguageCode":"fr","TranslatedText":"Qu\'est-ce que le cloud computing\xc2\xa0?"}'
+DEBUG:botocore.hooks:Event needs-retry.translate.TranslateText: calling handler <botocore.retryhandler.RetryHandler object at 0x7f4046bcc310>
+DEBUG:botocore.retryhandler:No retry needed.
+INFO:root:The SourceLanguageCode and TargetLanguageCode are valid - proceeding
+DEBUG:botocore.hooks:Event choose-service-name: calling handler <function handle_service_name_alias at 0x7f404702d320>
+DEBUG:botocore.hooks:Event creating-client-class.translate: calling handler <function add_generate_presigned_url at 0x7f40474dbb00>
+DEBUG:botocore.endpoint:Setting translate timeout as (60, 60)
+DEBUG:botocore.client:Registering retry handlers for service: translate
+DEBUG:botocore.hooks:Event before-parameter-build.translate.TranslateText: calling handler <function generate_idempotent_uuid at 0x7f4046d9ecb0>
+DEBUG:botocore.hooks:Event before-call.translate.TranslateText: calling handler <function add_recursion_detection_header at 0x7f4046d9d9e0>
+DEBUG:botocore.hooks:Event before-call.translate.TranslateText: calling handler <function inject_api_version_header_if_needed at 0x7f4046da6560>
+DEBUG:botocore.endpoint:Making request for OperationModel(name=TranslateText) with params: {'url_path': '/', 'query_string': '', 'method': 'POST', 'headers': {'X-Amz-Target': 'AWSShineFrontendService_20170701.TranslateText', 'Content-Type': 'application/x-amz-json-1.1', 'User-Agent': 'Boto3/1.24.22 Python/3.7.10 Linux/4.14.281-212.502.amzn2.x86_64 Botocore/1.27.22'}, 'body': b'{"Text": "Cloud computing is the on-demand delivery of IT resources over the Internet with pay-as-you-go pricing.", "SourceLanguageCode": "en", "TargetLanguageCode": "fr"}', 'url': 'https://translate.us-east-1.amazonaws.com/', 'context': {'client_region': 'us-east-1', 'client_config': <botocore.config.Config object at 0x7f40467bff90>, 'has_streaming_input': False, 'auth_type': None}}
+DEBUG:botocore.hooks:Event request-created.translate.TranslateText: calling handler <bound method RequestSigner.handler of <botocore.signers.RequestSigner object at 0x7f40467bf810>>
+DEBUG:botocore.hooks:Event choose-signer.translate.TranslateText: calling handler <function set_operation_specific_signer at 0x7f4046d9eb90>
+DEBUG:botocore.auth:Calculating signature using v4 auth.
+DEBUG:botocore.auth:CanonicalRequest:
+POST
+/
+
+content-type:application/x-amz-json-1.1
+host:translate.us-east-1.amazonaws.com
+x-amz-date:20220709T182751Z
+x-amz-security-token:IQoJb3JpZ2luX2VjEOP//////////wEaCXVzLWVhc3QtMSJHMEUCIQCxofSaFN/uqrHBPR+1xfgxnF9o5sNJL6alqSSqxuOW5wIgItHaJ137+KQpQFeKULHbbrZIhfWvEj5eS3X0Y5y9+Bgq6gMIHBAAGgw0MjAzNDEzODE0NDkiDEgGSe2JJLyhgHrl4CrHAxaZisfJ8pVEWI1u/kxpxe2i8Y+7mcXGJ+rQoSxMEHziLjEksw0GaI9sV4XG8t8zmiIe7Qp4ccw8h6WHEjnYNnGFeDxJDEavYONDizK8tlO9aJ3axEs126uNkYZObOmyus064yUqzsr5y9qnMQ4rpkmbeeGflWGrRvdu/NMSCNEt/5GiBE1N65cn9goskbdi5m3Gbp1eFj0keC/nO5DvHNGmklsv7K4oZSawKLA+StDSrAZ/ff5fbBwv1I8t+svXnAbuRO0rjFkbSHnTzRSsyzxU/TawI3AwuMQxox263baUSLkzNk/8qJ8JD6Ce877wranlBUEQoS31M5Th17IHtkOpzNcvSFm7sFo77s/H+oB4I8QqVGP1hQgdB7VK2GjSzCO+K5RzK476tRrdDsec5vFCC92nEoaR+d0Jn4D0i7ZXoMExSm8Sqs1u8Ngsj9L8k3arVVGtpNCXlN7log7SSC792/DdSOV+QxLLrtV2ffBgM4A41CXD1KXyNSYpMES8pUs0Us8kLxa/BRvehb7sophrRCgqUEdOzcCt0bbBpYSRSENvtZHDKpVyUO06tzU2mNjhE0jFDWHUY3cNYuIQdCMKVucjp28iMI/dppYGOpICQvmC5bMhfRkc7Z8mUhKVc/aaWqBtRr9W8Uk/SDkAEPQcsTXQWG5cslKkEAxRlyZ0qSHSw/8I9NAzwoBk8+2vqOe/bh1Mqgp5Or16ZzqmjrLqSl+XaSc8KbKUGGgjaVG8RE+QMqR17M2i42hxGOb7da3B8vdSRHekffDd1ZWF7PFFw88DQoXJI3FdjXFAuzgZ9yS36oRYdt8muMs1fyVfPJBzrPcbm3g0/ysFhAsqX6+1pSVztPGPS3QijbHO2W7OVXycZhz3QGb6e1W3mSBvNdExPC5HBd3ZYzfADu13Gq0E434Zmz5ubaogvrnCCioNL9ygfMmo8HmAtor7SEF5kTqbmQPiQkIDmQY8/hVpEAEsFw==
+x-amz-target:AWSShineFrontendService_20170701.TranslateText
+
+content-type;host;x-amz-date;x-amz-security-token;x-amz-target
+91b923058c88b70e315754bcfeb3c98d7588f0e570d7041fd88597fa01d7c602
+DEBUG:botocore.auth:StringToSign:
+AWS4-HMAC-SHA256
+20220709T182751Z
+20220709/us-east-1/translate/aws4_request
+40b47b425cc64bc373419d8e002bac483374735b2768de1351c4217bb3da903e
+DEBUG:botocore.auth:Signature:
+cf80d299882a6c04b2abc1e8f7a976311486ef544a877599ebae27a043e7a913
+DEBUG:botocore.hooks:Event request-created.translate.TranslateText: calling handler <function add_retry_headers at 0x7f4046da6c20>
+DEBUG:botocore.endpoint:Sending http request: <AWSPreparedRequest stream_output=False, method=POST, url=https://translate.us-east-1.amazonaws.com/, headers={'X-Amz-Target': b'AWSShineFrontendService_20170701.TranslateText', 'Content-Type': b'application/x-amz-json-1.1', 'User-Agent': b'Boto3/1.24.22 Python/3.7.10 Linux/4.14.281-212.502.amzn2.x86_64 Botocore/1.27.22', 'X-Amz-Date': b'20220709T182751Z', 'X-Amz-Security-Token': b'IQoJb3JpZ2luX2VjEOP//////////wEaCXVzLWVhc3QtMSJHMEUCIQCxofSaFN/uqrHBPR+1xfgxnF9o5sNJL6alqSSqxuOW5wIgItHaJ137+KQpQFeKULHbbrZIhfWvEj5eS3X0Y5y9+Bgq6gMIHBAAGgw0MjAzNDEzODE0NDkiDEgGSe2JJLyhgHrl4CrHAxaZisfJ8pVEWI1u/kxpxe2i8Y+7mcXGJ+rQoSxMEHziLjEksw0GaI9sV4XG8t8zmiIe7Qp4ccw8h6WHEjnYNnGFeDxJDEavYONDizK8tlO9aJ3axEs126uNkYZObOmyus064yUqzsr5y9qnMQ4rpkmbeeGflWGrRvdu/NMSCNEt/5GiBE1N65cn9goskbdi5m3Gbp1eFj0keC/nO5DvHNGmklsv7K4oZSawKLA+StDSrAZ/ff5fbBwv1I8t+svXnAbuRO0rjFkbSHnTzRSsyzxU/TawI3AwuMQxox263baUSLkzNk/8qJ8JD6Ce877wranlBUEQoS31M5Th17IHtkOpzNcvSFm7sFo77s/H+oB4I8QqVGP1hQgdB7VK2GjSzCO+K5RzK476tRrdDsec5vFCC92nEoaR+d0Jn4D0i7ZXoMExSm8Sqs1u8Ngsj9L8k3arVVGtpNCXlN7log7SSC792/DdSOV+QxLLrtV2ffBgM4A41CXD1KXyNSYpMES8pUs0Us8kLxa/BRvehb7sophrRCgqUEdOzcCt0bbBpYSRSENvtZHDKpVyUO06tzU2mNjhE0jFDWHUY3cNYuIQdCMKVucjp28iMI/dppYGOpICQvmC5bMhfRkc7Z8mUhKVc/aaWqBtRr9W8Uk/SDkAEPQcsTXQWG5cslKkEAxRlyZ0qSHSw/8I9NAzwoBk8+2vqOe/bh1Mqgp5Or16ZzqmjrLqSl+XaSc8KbKUGGgjaVG8RE+QMqR17M2i42hxGOb7da3B8vdSRHekffDd1ZWF7PFFw88DQoXJI3FdjXFAuzgZ9yS36oRYdt8muMs1fyVfPJBzrPcbm3g0/ysFhAsqX6+1pSVztPGPS3QijbHO2W7OVXycZhz3QGb6e1W3mSBvNdExPC5HBd3ZYzfADu13Gq0E434Zmz5ubaogvrnCCioNL9ygfMmo8HmAtor7SEF5kTqbmQPiQkIDmQY8/hVpEAEsFw==', 'Authorization': b'AWS4-HMAC-SHA256 Credential=ASIAWDXSMPFERDZ5MVM7/20220709/us-east-1/translate/aws4_request, SignedHeaders=content-type;host;x-amz-date;x-amz-security-token;x-amz-target, Signature=cf80d299882a6c04b2abc1e8f7a976311486ef544a877599ebae27a043e7a913', 'amz-sdk-invocation-id': b'78902e0d-08da-42a0-9ff6-311e3aad7749', 'amz-sdk-request': b'attempt=1', 'Content-Length': '171'}>
+DEBUG:botocore.httpsession:Certificate path: /home/ec2-user/.local/lib/python3.7/site-packages/botocore/cacert.pem
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): translate.us-east-1.amazonaws.com:443
+DEBUG:urllib3.connectionpool:https://translate.us-east-1.amazonaws.com:443 "POST / HTTP/1.1" 200 204
+DEBUG:botocore.parsers:Response headers: {'x-amzn-RequestId': '880f6bba-672e-43c6-aeb8-ae3c43432d4a', 'Cache-Control': 'no-cache', 'Content-Type': 'application/x-amz-json-1.1', 'Content-Length': '204', 'Date': 'Sat, 09 Jul 2022 18:27:51 GMT'}
+DEBUG:botocore.parsers:Response body:
+b'{"SourceLanguageCode":"en","TargetLanguageCode":"fr","TranslatedText":"Le cloud computing est la fourniture \xc3\xa0 la demande de ressources informatiques sur Internet avec une tarification \xc3\xa0 l\'utilisation."}'
+DEBUG:botocore.hooks:Event needs-retry.translate.TranslateText: calling handler <botocore.retryhandler.RetryHandler object at 0x7f40467bfa90>
+DEBUG:botocore.retryhandler:No retry needed.
+INFO:root:The SourceLanguageCode and TargetLanguageCode are valid - proceeding
+DEBUG:botocore.hooks:Event choose-service-name: calling handler <function handle_service_name_alias at 0x7f404702d320>
+DEBUG:botocore.hooks:Event creating-client-class.translate: calling handler <function add_generate_presigned_url at 0x7f40474dbb00>
+DEBUG:botocore.endpoint:Setting translate timeout as (60, 60)
+DEBUG:botocore.client:Registering retry handlers for service: translate
+DEBUG:botocore.hooks:Event before-parameter-build.translate.TranslateText: calling handler <function generate_idempotent_uuid at 0x7f4046d9ecb0>
+DEBUG:botocore.hooks:Event before-call.translate.TranslateText: calling handler <function add_recursion_detection_header at 0x7f4046d9d9e0>
+DEBUG:botocore.hooks:Event before-call.translate.TranslateText: calling handler <function inject_api_version_header_if_needed at 0x7f4046da6560>
+DEBUG:botocore.endpoint:Making request for OperationModel(name=TranslateText) with params: {'url_path': '/', 'query_string': '', 'method': 'POST', 'headers': {'X-Amz-Target': 'AWSShineFrontendService_20170701.TranslateText', 'Content-Type': 'application/x-amz-json-1.1', 'User-Agent': 'Boto3/1.24.22 Python/3.7.10 Linux/4.14.281-212.502.amzn2.x86_64 Botocore/1.27.22'}, 'body': b'{"Text": "Instead of buying, owning, and maintaining physical data centers and servers, you can access technology services, such as computing power, storage, and databases, on an as-needed basis from a cloud provider like Amazon Web Services (AWS)", "SourceLanguageCode": "en", "TargetLanguageCode": "fr"}', 'url': 'https://translate.us-east-1.amazonaws.com/', 'context': {'client_region': 'us-east-1', 'client_config': <botocore.config.Config object at 0x7f4046471f90>, 'has_streaming_input': False, 'auth_type': None}}
+DEBUG:botocore.hooks:Event request-created.translate.TranslateText: calling handler <bound method RequestSigner.handler of <botocore.signers.RequestSigner object at 0x7f40467bfb90>>
+DEBUG:botocore.hooks:Event choose-signer.translate.TranslateText: calling handler <function set_operation_specific_signer at 0x7f4046d9eb90>
+DEBUG:botocore.auth:Calculating signature using v4 auth.
+DEBUG:botocore.auth:CanonicalRequest:
+POST
+/
+
+content-type:application/x-amz-json-1.1
+host:translate.us-east-1.amazonaws.com
+x-amz-date:20220709T182751Z
+x-amz-security-token:IQoJb3JpZ2luX2VjEOP//////////wEaCXVzLWVhc3QtMSJHMEUCIQCxofSaFN/uqrHBPR+1xfgxnF9o5sNJL6alqSSqxuOW5wIgItHaJ137+KQpQFeKULHbbrZIhfWvEj5eS3X0Y5y9+Bgq6gMIHBAAGgw0MjAzNDEzODE0NDkiDEgGSe2JJLyhgHrl4CrHAxaZisfJ8pVEWI1u/kxpxe2i8Y+7mcXGJ+rQoSxMEHziLjEksw0GaI9sV4XG8t8zmiIe7Qp4ccw8h6WHEjnYNnGFeDxJDEavYONDizK8tlO9aJ3axEs126uNkYZObOmyus064yUqzsr5y9qnMQ4rpkmbeeGflWGrRvdu/NMSCNEt/5GiBE1N65cn9goskbdi5m3Gbp1eFj0keC/nO5DvHNGmklsv7K4oZSawKLA+StDSrAZ/ff5fbBwv1I8t+svXnAbuRO0rjFkbSHnTzRSsyzxU/TawI3AwuMQxox263baUSLkzNk/8qJ8JD6Ce877wranlBUEQoS31M5Th17IHtkOpzNcvSFm7sFo77s/H+oB4I8QqVGP1hQgdB7VK2GjSzCO+K5RzK476tRrdDsec5vFCC92nEoaR+d0Jn4D0i7ZXoMExSm8Sqs1u8Ngsj9L8k3arVVGtpNCXlN7log7SSC792/DdSOV+QxLLrtV2ffBgM4A41CXD1KXyNSYpMES8pUs0Us8kLxa/BRvehb7sophrRCgqUEdOzcCt0bbBpYSRSENvtZHDKpVyUO06tzU2mNjhE0jFDWHUY3cNYuIQdCMKVucjp28iMI/dppYGOpICQvmC5bMhfRkc7Z8mUhKVc/aaWqBtRr9W8Uk/SDkAEPQcsTXQWG5cslKkEAxRlyZ0qSHSw/8I9NAzwoBk8+2vqOe/bh1Mqgp5Or16ZzqmjrLqSl+XaSc8KbKUGGgjaVG8RE+QMqR17M2i42hxGOb7da3B8vdSRHekffDd1ZWF7PFFw88DQoXJI3FdjXFAuzgZ9yS36oRYdt8muMs1fyVfPJBzrPcbm3g0/ysFhAsqX6+1pSVztPGPS3QijbHO2W7OVXycZhz3QGb6e1W3mSBvNdExPC5HBd3ZYzfADu13Gq0E434Zmz5ubaogvrnCCioNL9ygfMmo8HmAtor7SEF5kTqbmQPiQkIDmQY8/hVpEAEsFw==
+x-amz-target:AWSShineFrontendService_20170701.TranslateText
+
+content-type;host;x-amz-date;x-amz-security-token;x-amz-target
+105bb52e5c591fabf0d21a89f1852dac3c2eb573fd14c7c478665ea209ff0766
+DEBUG:botocore.auth:StringToSign:
+AWS4-HMAC-SHA256
+20220709T182751Z
+20220709/us-east-1/translate/aws4_request
+2ee902267b66fd9ed271f39710f5c2e90d052a8467557cb343ae836c9a65d6f4
+DEBUG:botocore.auth:Signature:
+4bcfdbe9546f7efbc4c1f6b850269fe8cc3e08a86073c633bdf095018181d32b
+DEBUG:botocore.hooks:Event request-created.translate.TranslateText: calling handler <function add_retry_headers at 0x7f4046da6c20>
+DEBUG:botocore.endpoint:Sending http request: <AWSPreparedRequest stream_output=False, method=POST, url=https://translate.us-east-1.amazonaws.com/, headers={'X-Amz-Target': b'AWSShineFrontendService_20170701.TranslateText', 'Content-Type': b'application/x-amz-json-1.1', 'User-Agent': b'Boto3/1.24.22 Python/3.7.10 Linux/4.14.281-212.502.amzn2.x86_64 Botocore/1.27.22', 'X-Amz-Date': b'20220709T182751Z', 'X-Amz-Security-Token': b'IQoJb3JpZ2luX2VjEOP//////////wEaCXVzLWVhc3QtMSJHMEUCIQCxofSaFN/uqrHBPR+1xfgxnF9o5sNJL6alqSSqxuOW5wIgItHaJ137+KQpQFeKULHbbrZIhfWvEj5eS3X0Y5y9+Bgq6gMIHBAAGgw0MjAzNDEzODE0NDkiDEgGSe2JJLyhgHrl4CrHAxaZisfJ8pVEWI1u/kxpxe2i8Y+7mcXGJ+rQoSxMEHziLjEksw0GaI9sV4XG8t8zmiIe7Qp4ccw8h6WHEjnYNnGFeDxJDEavYONDizK8tlO9aJ3axEs126uNkYZObOmyus064yUqzsr5y9qnMQ4rpkmbeeGflWGrRvdu/NMSCNEt/5GiBE1N65cn9goskbdi5m3Gbp1eFj0keC/nO5DvHNGmklsv7K4oZSawKLA+StDSrAZ/ff5fbBwv1I8t+svXnAbuRO0rjFkbSHnTzRSsyzxU/TawI3AwuMQxox263baUSLkzNk/8qJ8JD6Ce877wranlBUEQoS31M5Th17IHtkOpzNcvSFm7sFo77s/H+oB4I8QqVGP1hQgdB7VK2GjSzCO+K5RzK476tRrdDsec5vFCC92nEoaR+d0Jn4D0i7ZXoMExSm8Sqs1u8Ngsj9L8k3arVVGtpNCXlN7log7SSC792/DdSOV+QxLLrtV2ffBgM4A41CXD1KXyNSYpMES8pUs0Us8kLxa/BRvehb7sophrRCgqUEdOzcCt0bbBpYSRSENvtZHDKpVyUO06tzU2mNjhE0jFDWHUY3cNYuIQdCMKVucjp28iMI/dppYGOpICQvmC5bMhfRkc7Z8mUhKVc/aaWqBtRr9W8Uk/SDkAEPQcsTXQWG5cslKkEAxRlyZ0qSHSw/8I9NAzwoBk8+2vqOe/bh1Mqgp5Or16ZzqmjrLqSl+XaSc8KbKUGGgjaVG8RE+QMqR17M2i42hxGOb7da3B8vdSRHekffDd1ZWF7PFFw88DQoXJI3FdjXFAuzgZ9yS36oRYdt8muMs1fyVfPJBzrPcbm3g0/ysFhAsqX6+1pSVztPGPS3QijbHO2W7OVXycZhz3QGb6e1W3mSBvNdExPC5HBd3ZYzfADu13Gq0E434Zmz5ubaogvrnCCioNL9ygfMmo8HmAtor7SEF5kTqbmQPiQkIDmQY8/hVpEAEsFw==', 'Authorization': b'AWS4-HMAC-SHA256 Credential=ASIAWDXSMPFERDZ5MVM7/20220709/us-east-1/translate/aws4_request, SignedHeaders=content-type;host;x-amz-date;x-amz-security-token;x-amz-target, Signature=4bcfdbe9546f7efbc4c1f6b850269fe8cc3e08a86073c633bdf095018181d32b', 'amz-sdk-invocation-id': b'32750836-3521-40c4-86c4-7d871f94f512', 'amz-sdk-request': b'attempt=1', 'Content-Length': '305'}>
+DEBUG:botocore.httpsession:Certificate path: /home/ec2-user/.local/lib/python3.7/site-packages/botocore/cacert.pem
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): translate.us-east-1.amazonaws.com:443
+DEBUG:urllib3.connectionpool:https://translate.us-east-1.amazonaws.com:443 "POST / HTTP/1.1" 200 377
+DEBUG:botocore.parsers:Response headers: {'x-amzn-RequestId': '991528c9-5400-4ebe-a122-0c09d0c89e0f', 'Cache-Control': 'no-cache', 'Content-Type': 'application/x-amz-json-1.1', 'Content-Length': '377', 'Date': 'Sat, 09 Jul 2022 18:27:51 GMT'}
+DEBUG:botocore.parsers:Response body:
+b'{"SourceLanguageCode":"en","TargetLanguageCode":"fr","TranslatedText":"Au lieu d\'acheter, de poss\xc3\xa9der et de g\xc3\xa9rer des centres de donn\xc3\xa9es physiques et des serveurs, vous pouvez acc\xc3\xa9der \xc3\xa0 des services technologiques, tels que la puissance de calcul, le stockage et les bases de donn\xc3\xa9es, selon vos besoins aupr\xc3\xa8s d\'un fournisseur de cloud tel qu\'Amazon Web Services (AWS)"}'
+DEBUG:botocore.hooks:Event needs-retry.translate.TranslateText: calling handler <botocore.retryhandler.RetryHandler object at 0x7f4046471790>
+DEBUG:botocore.retryhandler:No retry needed.
+INFO:root:The SourceLanguageCode and TargetLanguageCode are valid - proceeding
+DEBUG:botocore.hooks:Event choose-service-name: calling handler <function handle_service_name_alias at 0x7f404702d320>
+DEBUG:botocore.hooks:Event creating-client-class.translate: calling handler <function add_generate_presigned_url at 0x7f40474dbb00>
+DEBUG:botocore.endpoint:Setting translate timeout as (60, 60)
+DEBUG:botocore.client:Registering retry handlers for service: translate
+DEBUG:botocore.hooks:Event before-parameter-build.translate.TranslateText: calling handler <function generate_idempotent_uuid at 0x7f4046d9ecb0>
+DEBUG:botocore.hooks:Event before-call.translate.TranslateText: calling handler <function add_recursion_detection_header at 0x7f4046d9d9e0>
+DEBUG:botocore.hooks:Event before-call.translate.TranslateText: calling handler <function inject_api_version_header_if_needed at 0x7f4046da6560>
+DEBUG:botocore.endpoint:Making request for OperationModel(name=TranslateText) with params: {'url_path': '/', 'query_string': '', 'method': 'POST', 'headers': {'X-Amz-Target': 'AWSShineFrontendService_20170701.TranslateText', 'Content-Type': 'application/x-amz-json-1.1', 'User-Agent': 'Boto3/1.24.22 Python/3.7.10 Linux/4.14.281-212.502.amzn2.x86_64 Botocore/1.27.22'}, 'body': b'{"Text": "Who is using cloud computing?", "SourceLanguageCode": "en", "TargetLanguageCode": "fr"}', 'url': 'https://translate.us-east-1.amazonaws.com/', 'context': {'client_region': 'us-east-1', 'client_config': <botocore.config.Config object at 0x7f4046494190>, 'has_streaming_input': False, 'auth_type': None}}
+DEBUG:botocore.hooks:Event request-created.translate.TranslateText: calling handler <bound method RequestSigner.handler of <botocore.signers.RequestSigner object at 0x7f4046471890>>
+DEBUG:botocore.hooks:Event choose-signer.translate.TranslateText: calling handler <function set_operation_specific_signer at 0x7f4046d9eb90>
+DEBUG:botocore.auth:Calculating signature using v4 auth.
+DEBUG:botocore.auth:CanonicalRequest:
+POST
+/
+
+content-type:application/x-amz-json-1.1
+host:translate.us-east-1.amazonaws.com
+x-amz-date:20220709T182751Z
+x-amz-security-token:IQoJb3JpZ2luX2VjEOP//////////wEaCXVzLWVhc3QtMSJHMEUCIQCxofSaFN/uqrHBPR+1xfgxnF9o5sNJL6alqSSqxuOW5wIgItHaJ137+KQpQFeKULHbbrZIhfWvEj5eS3X0Y5y9+Bgq6gMIHBAAGgw0MjAzNDEzODE0NDkiDEgGSe2JJLyhgHrl4CrHAxaZisfJ8pVEWI1u/kxpxe2i8Y+7mcXGJ+rQoSxMEHziLjEksw0GaI9sV4XG8t8zmiIe7Qp4ccw8h6WHEjnYNnGFeDxJDEavYONDizK8tlO9aJ3axEs126uNkYZObOmyus064yUqzsr5y9qnMQ4rpkmbeeGflWGrRvdu/NMSCNEt/5GiBE1N65cn9goskbdi5m3Gbp1eFj0keC/nO5DvHNGmklsv7K4oZSawKLA+StDSrAZ/ff5fbBwv1I8t+svXnAbuRO0rjFkbSHnTzRSsyzxU/TawI3AwuMQxox263baUSLkzNk/8qJ8JD6Ce877wranlBUEQoS31M5Th17IHtkOpzNcvSFm7sFo77s/H+oB4I8QqVGP1hQgdB7VK2GjSzCO+K5RzK476tRrdDsec5vFCC92nEoaR+d0Jn4D0i7ZXoMExSm8Sqs1u8Ngsj9L8k3arVVGtpNCXlN7log7SSC792/DdSOV+QxLLrtV2ffBgM4A41CXD1KXyNSYpMES8pUs0Us8kLxa/BRvehb7sophrRCgqUEdOzcCt0bbBpYSRSENvtZHDKpVyUO06tzU2mNjhE0jFDWHUY3cNYuIQdCMKVucjp28iMI/dppYGOpICQvmC5bMhfRkc7Z8mUhKVc/aaWqBtRr9W8Uk/SDkAEPQcsTXQWG5cslKkEAxRlyZ0qSHSw/8I9NAzwoBk8+2vqOe/bh1Mqgp5Or16ZzqmjrLqSl+XaSc8KbKUGGgjaVG8RE+QMqR17M2i42hxGOb7da3B8vdSRHekffDd1ZWF7PFFw88DQoXJI3FdjXFAuzgZ9yS36oRYdt8muMs1fyVfPJBzrPcbm3g0/ysFhAsqX6+1pSVztPGPS3QijbHO2W7OVXycZhz3QGb6e1W3mSBvNdExPC5HBd3ZYzfADu13Gq0E434Zmz5ubaogvrnCCioNL9ygfMmo8HmAtor7SEF5kTqbmQPiQkIDmQY8/hVpEAEsFw==
+x-amz-target:AWSShineFrontendService_20170701.TranslateText
+
+content-type;host;x-amz-date;x-amz-security-token;x-amz-target
+56e1a2993cc2855703770e2a377930560ce1f36873db24289668e0dcbbac8128
+DEBUG:botocore.auth:StringToSign:
+AWS4-HMAC-SHA256
+20220709T182751Z
+20220709/us-east-1/translate/aws4_request
+f848f59b5b6e7516007e7d657d84dc37a2b3d702e34546de8cea55b5cf377743
+DEBUG:botocore.auth:Signature:
+27c36d16b109fe8cb935b27ab3293a3a15054697198dcc38faf0e7657d1d7ab3
+DEBUG:botocore.hooks:Event request-created.translate.TranslateText: calling handler <function add_retry_headers at 0x7f4046da6c20>
+DEBUG:botocore.endpoint:Sending http request: <AWSPreparedRequest stream_output=False, method=POST, url=https://translate.us-east-1.amazonaws.com/, headers={'X-Amz-Target': b'AWSShineFrontendService_20170701.TranslateText', 'Content-Type': b'application/x-amz-json-1.1', 'User-Agent': b'Boto3/1.24.22 Python/3.7.10 Linux/4.14.281-212.502.amzn2.x86_64 Botocore/1.27.22', 'X-Amz-Date': b'20220709T182751Z', 'X-Amz-Security-Token': b'IQoJb3JpZ2luX2VjEOP//////////wEaCXVzLWVhc3QtMSJHMEUCIQCxofSaFN/uqrHBPR+1xfgxnF9o5sNJL6alqSSqxuOW5wIgItHaJ137+KQpQFeKULHbbrZIhfWvEj5eS3X0Y5y9+Bgq6gMIHBAAGgw0MjAzNDEzODE0NDkiDEgGSe2JJLyhgHrl4CrHAxaZisfJ8pVEWI1u/kxpxe2i8Y+7mcXGJ+rQoSxMEHziLjEksw0GaI9sV4XG8t8zmiIe7Qp4ccw8h6WHEjnYNnGFeDxJDEavYONDizK8tlO9aJ3axEs126uNkYZObOmyus064yUqzsr5y9qnMQ4rpkmbeeGflWGrRvdu/NMSCNEt/5GiBE1N65cn9goskbdi5m3Gbp1eFj0keC/nO5DvHNGmklsv7K4oZSawKLA+StDSrAZ/ff5fbBwv1I8t+svXnAbuRO0rjFkbSHnTzRSsyzxU/TawI3AwuMQxox263baUSLkzNk/8qJ8JD6Ce877wranlBUEQoS31M5Th17IHtkOpzNcvSFm7sFo77s/H+oB4I8QqVGP1hQgdB7VK2GjSzCO+K5RzK476tRrdDsec5vFCC92nEoaR+d0Jn4D0i7ZXoMExSm8Sqs1u8Ngsj9L8k3arVVGtpNCXlN7log7SSC792/DdSOV+QxLLrtV2ffBgM4A41CXD1KXyNSYpMES8pUs0Us8kLxa/BRvehb7sophrRCgqUEdOzcCt0bbBpYSRSENvtZHDKpVyUO06tzU2mNjhE0jFDWHUY3cNYuIQdCMKVucjp28iMI/dppYGOpICQvmC5bMhfRkc7Z8mUhKVc/aaWqBtRr9W8Uk/SDkAEPQcsTXQWG5cslKkEAxRlyZ0qSHSw/8I9NAzwoBk8+2vqOe/bh1Mqgp5Or16ZzqmjrLqSl+XaSc8KbKUGGgjaVG8RE+QMqR17M2i42hxGOb7da3B8vdSRHekffDd1ZWF7PFFw88DQoXJI3FdjXFAuzgZ9yS36oRYdt8muMs1fyVfPJBzrPcbm3g0/ysFhAsqX6+1pSVztPGPS3QijbHO2W7OVXycZhz3QGb6e1W3mSBvNdExPC5HBd3ZYzfADu13Gq0E434Zmz5ubaogvrnCCioNL9ygfMmo8HmAtor7SEF5kTqbmQPiQkIDmQY8/hVpEAEsFw==', 'Authorization': b'AWS4-HMAC-SHA256 Credential=ASIAWDXSMPFERDZ5MVM7/20220709/us-east-1/translate/aws4_request, SignedHeaders=content-type;host;x-amz-date;x-amz-security-token;x-amz-target, Signature=27c36d16b109fe8cb935b27ab3293a3a15054697198dcc38faf0e7657d1d7ab3', 'amz-sdk-invocation-id': b'dd10807c-9098-4036-bc5a-55e1a2a2cb53', 'amz-sdk-request': b'attempt=1', 'Content-Length': '97'}>
+DEBUG:botocore.httpsession:Certificate path: /home/ec2-user/.local/lib/python3.7/site-packages/botocore/cacert.pem
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): translate.us-east-1.amazonaws.com:443
+DEBUG:urllib3.connectionpool:https://translate.us-east-1.amazonaws.com:443 "POST / HTTP/1.1" 200 106
+DEBUG:botocore.parsers:Response headers: {'x-amzn-RequestId': '2283ce84-38b1-40d8-9b68-45f991d44a3e', 'Cache-Control': 'no-cache', 'Content-Type': 'application/x-amz-json-1.1', 'Content-Length': '106', 'Date': 'Sat, 09 Jul 2022 18:27:51 GMT'}
+DEBUG:botocore.parsers:Response body:
+b'{"SourceLanguageCode":"en","TargetLanguageCode":"fr","TranslatedText":"Qui utilise le cloud computing\xc2\xa0?"}'
+DEBUG:botocore.hooks:Event needs-retry.translate.TranslateText: calling handler <botocore.retryhandler.RetryHandler object at 0x7f4046494650>
+DEBUG:botocore.retryhandler:No retry needed.
+INFO:root:The SourceLanguageCode and TargetLanguageCode are valid - proceeding
+DEBUG:botocore.hooks:Event choose-service-name: calling handler <function handle_service_name_alias at 0x7f404702d320>
+DEBUG:botocore.hooks:Event creating-client-class.translate: calling handler <function add_generate_presigned_url at 0x7f40474dbb00>
+DEBUG:botocore.endpoint:Setting translate timeout as (60, 60)
+DEBUG:botocore.client:Registering retry handlers for service: translate
+DEBUG:botocore.hooks:Event before-parameter-build.translate.TranslateText: calling handler <function generate_idempotent_uuid at 0x7f4046d9ecb0>
+DEBUG:botocore.hooks:Event before-call.translate.TranslateText: calling handler <function add_recursion_detection_header at 0x7f4046d9d9e0>
+DEBUG:botocore.hooks:Event before-call.translate.TranslateText: calling handler <function inject_api_version_header_if_needed at 0x7f4046da6560>
+DEBUG:botocore.endpoint:Making request for OperationModel(name=TranslateText) with params: {'url_path': '/', 'query_string': '', 'method': 'POST', 'headers': {'X-Amz-Target': 'AWSShineFrontendService_20170701.TranslateText', 'Content-Type': 'application/x-amz-json-1.1', 'User-Agent': 'Boto3/1.24.22 Python/3.7.10 Linux/4.14.281-212.502.amzn2.x86_64 Botocore/1.27.22'}, 'body': b'{"Text": "Organizations of every type, size, and industry are using the cloud for a wide variety of use cases, such as data backup, disaster recovery, email, virtual desktops, software development and testing, big data analytics, and customer-facing web applications.", "SourceLanguageCode": "en", "TargetLanguageCode": "fr"}', 'url': 'https://translate.us-east-1.amazonaws.com/', 'context': {'client_region': 'us-east-1', 'client_config': <botocore.config.Config object at 0x7f404649bf90>, 'has_streaming_input': False, 'auth_type': None}}
+DEBUG:botocore.hooks:Event request-created.translate.TranslateText: calling handler <bound method RequestSigner.handler of <botocore.signers.RequestSigner object at 0x7f4046494cd0>>
+DEBUG:botocore.hooks:Event choose-signer.translate.TranslateText: calling handler <function set_operation_specific_signer at 0x7f4046d9eb90>
+DEBUG:botocore.auth:Calculating signature using v4 auth.
+DEBUG:botocore.auth:CanonicalRequest:
+POST
+/
+
+content-type:application/x-amz-json-1.1
+host:translate.us-east-1.amazonaws.com
+x-amz-date:20220709T182751Z
+x-amz-security-token:IQoJb3JpZ2luX2VjEOP//////////wEaCXVzLWVhc3QtMSJHMEUCIQCxofSaFN/uqrHBPR+1xfgxnF9o5sNJL6alqSSqxuOW5wIgItHaJ137+KQpQFeKULHbbrZIhfWvEj5eS3X0Y5y9+Bgq6gMIHBAAGgw0MjAzNDEzODE0NDkiDEgGSe2JJLyhgHrl4CrHAxaZisfJ8pVEWI1u/kxpxe2i8Y+7mcXGJ+rQoSxMEHziLjEksw0GaI9sV4XG8t8zmiIe7Qp4ccw8h6WHEjnYNnGFeDxJDEavYONDizK8tlO9aJ3axEs126uNkYZObOmyus064yUqzsr5y9qnMQ4rpkmbeeGflWGrRvdu/NMSCNEt/5GiBE1N65cn9goskbdi5m3Gbp1eFj0keC/nO5DvHNGmklsv7K4oZSawKLA+StDSrAZ/ff5fbBwv1I8t+svXnAbuRO0rjFkbSHnTzRSsyzxU/TawI3AwuMQxox263baUSLkzNk/8qJ8JD6Ce877wranlBUEQoS31M5Th17IHtkOpzNcvSFm7sFo77s/H+oB4I8QqVGP1hQgdB7VK2GjSzCO+K5RzK476tRrdDsec5vFCC92nEoaR+d0Jn4D0i7ZXoMExSm8Sqs1u8Ngsj9L8k3arVVGtpNCXlN7log7SSC792/DdSOV+QxLLrtV2ffBgM4A41CXD1KXyNSYpMES8pUs0Us8kLxa/BRvehb7sophrRCgqUEdOzcCt0bbBpYSRSENvtZHDKpVyUO06tzU2mNjhE0jFDWHUY3cNYuIQdCMKVucjp28iMI/dppYGOpICQvmC5bMhfRkc7Z8mUhKVc/aaWqBtRr9W8Uk/SDkAEPQcsTXQWG5cslKkEAxRlyZ0qSHSw/8I9NAzwoBk8+2vqOe/bh1Mqgp5Or16ZzqmjrLqSl+XaSc8KbKUGGgjaVG8RE+QMqR17M2i42hxGOb7da3B8vdSRHekffDd1ZWF7PFFw88DQoXJI3FdjXFAuzgZ9yS36oRYdt8muMs1fyVfPJBzrPcbm3g0/ysFhAsqX6+1pSVztPGPS3QijbHO2W7OVXycZhz3QGb6e1W3mSBvNdExPC5HBd3ZYzfADu13Gq0E434Zmz5ubaogvrnCCioNL9ygfMmo8HmAtor7SEF5kTqbmQPiQkIDmQY8/hVpEAEsFw==
+x-amz-target:AWSShineFrontendService_20170701.TranslateText
+
+content-type;host;x-amz-date;x-amz-security-token;x-amz-target
+905acc7eb963cc5928ab5ff4a44e461aca097306bf8fb8dd94502a977ea7c53a
+DEBUG:botocore.auth:StringToSign:
+AWS4-HMAC-SHA256
+20220709T182751Z
+20220709/us-east-1/translate/aws4_request
+ce8fe04c5ad8c3de5639959d023add1b8e176443a4b98f69c0cf67b6a1c2b192
+DEBUG:botocore.auth:Signature:
+c7f232b374af56dfd4311aec1c38337d1c638f0dfa82cf642ebba87d21f83e34
+DEBUG:botocore.hooks:Event request-created.translate.TranslateText: calling handler <function add_retry_headers at 0x7f4046da6c20>
+DEBUG:botocore.endpoint:Sending http request: <AWSPreparedRequest stream_output=False, method=POST, url=https://translate.us-east-1.amazonaws.com/, headers={'X-Amz-Target': b'AWSShineFrontendService_20170701.TranslateText', 'Content-Type': b'application/x-amz-json-1.1', 'User-Agent': b'Boto3/1.24.22 Python/3.7.10 Linux/4.14.281-212.502.amzn2.x86_64 Botocore/1.27.22', 'X-Amz-Date': b'20220709T182751Z', 'X-Amz-Security-Token': b'IQoJb3JpZ2luX2VjEOP//////////wEaCXVzLWVhc3QtMSJHMEUCIQCxofSaFN/uqrHBPR+1xfgxnF9o5sNJL6alqSSqxuOW5wIgItHaJ137+KQpQFeKULHbbrZIhfWvEj5eS3X0Y5y9+Bgq6gMIHBAAGgw0MjAzNDEzODE0NDkiDEgGSe2JJLyhgHrl4CrHAxaZisfJ8pVEWI1u/kxpxe2i8Y+7mcXGJ+rQoSxMEHziLjEksw0GaI9sV4XG8t8zmiIe7Qp4ccw8h6WHEjnYNnGFeDxJDEavYONDizK8tlO9aJ3axEs126uNkYZObOmyus064yUqzsr5y9qnMQ4rpkmbeeGflWGrRvdu/NMSCNEt/5GiBE1N65cn9goskbdi5m3Gbp1eFj0keC/nO5DvHNGmklsv7K4oZSawKLA+StDSrAZ/ff5fbBwv1I8t+svXnAbuRO0rjFkbSHnTzRSsyzxU/TawI3AwuMQxox263baUSLkzNk/8qJ8JD6Ce877wranlBUEQoS31M5Th17IHtkOpzNcvSFm7sFo77s/H+oB4I8QqVGP1hQgdB7VK2GjSzCO+K5RzK476tRrdDsec5vFCC92nEoaR+d0Jn4D0i7ZXoMExSm8Sqs1u8Ngsj9L8k3arVVGtpNCXlN7log7SSC792/DdSOV+QxLLrtV2ffBgM4A41CXD1KXyNSYpMES8pUs0Us8kLxa/BRvehb7sophrRCgqUEdOzcCt0bbBpYSRSENvtZHDKpVyUO06tzU2mNjhE0jFDWHUY3cNYuIQdCMKVucjp28iMI/dppYGOpICQvmC5bMhfRkc7Z8mUhKVc/aaWqBtRr9W8Uk/SDkAEPQcsTXQWG5cslKkEAxRlyZ0qSHSw/8I9NAzwoBk8+2vqOe/bh1Mqgp5Or16ZzqmjrLqSl+XaSc8KbKUGGgjaVG8RE+QMqR17M2i42hxGOb7da3B8vdSRHekffDd1ZWF7PFFw88DQoXJI3FdjXFAuzgZ9yS36oRYdt8muMs1fyVfPJBzrPcbm3g0/ysFhAsqX6+1pSVztPGPS3QijbHO2W7OVXycZhz3QGb6e1W3mSBvNdExPC5HBd3ZYzfADu13Gq0E434Zmz5ubaogvrnCCioNL9ygfMmo8HmAtor7SEF5kTqbmQPiQkIDmQY8/hVpEAEsFw==', 'Authorization': b'AWS4-HMAC-SHA256 Credential=ASIAWDXSMPFERDZ5MVM7/20220709/us-east-1/translate/aws4_request, SignedHeaders=content-type;host;x-amz-date;x-amz-security-token;x-amz-target, Signature=c7f232b374af56dfd4311aec1c38337d1c638f0dfa82cf642ebba87d21f83e34', 'amz-sdk-invocation-id': b'99c6e780-1dd0-4704-9230-6969c030c36f', 'amz-sdk-request': b'attempt=1', 'Content-Length': '325'}>
+DEBUG:botocore.httpsession:Certificate path: /home/ec2-user/.local/lib/python3.7/site-packages/botocore/cacert.pem
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): translate.us-east-1.amazonaws.com:443
+DEBUG:urllib3.connectionpool:https://translate.us-east-1.amazonaws.com:443 "POST / HTTP/1.1" 200 420
+DEBUG:botocore.parsers:Response headers: {'x-amzn-RequestId': '741bd9d3-39fc-4f5d-bbc7-b9329a52b025', 'Cache-Control': 'no-cache', 'Content-Type': 'application/x-amz-json-1.1', 'Content-Length': '420', 'Date': 'Sat, 09 Jul 2022 18:27:51 GMT'}
+DEBUG:botocore.parsers:Response body:
+b'{"SourceLanguageCode":"en","TargetLanguageCode":"fr","TranslatedText":"Les entreprises de tous types, de toutes tailles et de tous secteurs utilisent le cloud pour une grande vari\xc3\xa9t\xc3\xa9 de cas d\'utilisation, tels que la sauvegarde des donn\xc3\xa9es, la reprise apr\xc3\xa8s sinistre, la messagerie, les bureaux virtuels, le d\xc3\xa9veloppement et les tests de logiciels, l\'analyse du Big Data et les applications Web orient\xc3\xa9es client."}'
+DEBUG:botocore.hooks:Event needs-retry.translate.TranslateText: calling handler <botocore.retryhandler.RetryHandler object at 0x7f404649b810>
+DEBUG:botocore.retryhandler:No retry needed.
+INFO:root:The SourceLanguageCode and TargetLanguageCode are valid - proceeding
+DEBUG:botocore.hooks:Event choose-service-name: calling handler <function handle_service_name_alias at 0x7f404702d320>
+DEBUG:botocore.hooks:Event creating-client-class.translate: calling handler <function add_generate_presigned_url at 0x7f40474dbb00>
+DEBUG:botocore.endpoint:Setting translate timeout as (60, 60)
+DEBUG:botocore.client:Registering retry handlers for service: translate
+DEBUG:botocore.hooks:Event before-parameter-build.translate.TranslateText: calling handler <function generate_idempotent_uuid at 0x7f4046d9ecb0>
+DEBUG:botocore.hooks:Event before-call.translate.TranslateText: calling handler <function add_recursion_detection_header at 0x7f4046d9d9e0>
+DEBUG:botocore.hooks:Event before-call.translate.TranslateText: calling handler <function inject_api_version_header_if_needed at 0x7f4046da6560>
+DEBUG:botocore.endpoint:Making request for OperationModel(name=TranslateText) with params: {'url_path': '/', 'query_string': '', 'method': 'POST', 'headers': {'X-Amz-Target': 'AWSShineFrontendService_20170701.TranslateText', 'Content-Type': 'application/x-amz-json-1.1', 'User-Agent': 'Boto3/1.24.22 Python/3.7.10 Linux/4.14.281-212.502.amzn2.x86_64 Botocore/1.27.22'}, 'body': b'{"Text": "For example, healthcare companies are using the cloud to develop more personalized treatments for patients. Financial services companies are using the cloud to power real-time fraud detection and prevention.", "SourceLanguageCode": "en", "TargetLanguageCode": "fr"}', 'url': 'https://translate.us-east-1.amazonaws.com/', 'context': {'client_region': 'us-east-1', 'client_config': <botocore.config.Config object at 0x7f404649fcd0>, 'has_streaming_input': False, 'auth_type': None}}
+DEBUG:botocore.hooks:Event request-created.translate.TranslateText: calling handler <bound method RequestSigner.handler of <botocore.signers.RequestSigner object at 0x7f404649b590>>
+DEBUG:botocore.hooks:Event choose-signer.translate.TranslateText: calling handler <function set_operation_specific_signer at 0x7f4046d9eb90>
+DEBUG:botocore.auth:Calculating signature using v4 auth.
+DEBUG:botocore.auth:CanonicalRequest:
+POST
+/
+
+content-type:application/x-amz-json-1.1
+host:translate.us-east-1.amazonaws.com
+x-amz-date:20220709T182752Z
+x-amz-security-token:IQoJb3JpZ2luX2VjEOP//////////wEaCXVzLWVhc3QtMSJHMEUCIQCxofSaFN/uqrHBPR+1xfgxnF9o5sNJL6alqSSqxuOW5wIgItHaJ137+KQpQFeKULHbbrZIhfWvEj5eS3X0Y5y9+Bgq6gMIHBAAGgw0MjAzNDEzODE0NDkiDEgGSe2JJLyhgHrl4CrHAxaZisfJ8pVEWI1u/kxpxe2i8Y+7mcXGJ+rQoSxMEHziLjEksw0GaI9sV4XG8t8zmiIe7Qp4ccw8h6WHEjnYNnGFeDxJDEavYONDizK8tlO9aJ3axEs126uNkYZObOmyus064yUqzsr5y9qnMQ4rpkmbeeGflWGrRvdu/NMSCNEt/5GiBE1N65cn9goskbdi5m3Gbp1eFj0keC/nO5DvHNGmklsv7K4oZSawKLA+StDSrAZ/ff5fbBwv1I8t+svXnAbuRO0rjFkbSHnTzRSsyzxU/TawI3AwuMQxox263baUSLkzNk/8qJ8JD6Ce877wranlBUEQoS31M5Th17IHtkOpzNcvSFm7sFo77s/H+oB4I8QqVGP1hQgdB7VK2GjSzCO+K5RzK476tRrdDsec5vFCC92nEoaR+d0Jn4D0i7ZXoMExSm8Sqs1u8Ngsj9L8k3arVVGtpNCXlN7log7SSC792/DdSOV+QxLLrtV2ffBgM4A41CXD1KXyNSYpMES8pUs0Us8kLxa/BRvehb7sophrRCgqUEdOzcCt0bbBpYSRSENvtZHDKpVyUO06tzU2mNjhE0jFDWHUY3cNYuIQdCMKVucjp28iMI/dppYGOpICQvmC5bMhfRkc7Z8mUhKVc/aaWqBtRr9W8Uk/SDkAEPQcsTXQWG5cslKkEAxRlyZ0qSHSw/8I9NAzwoBk8+2vqOe/bh1Mqgp5Or16ZzqmjrLqSl+XaSc8KbKUGGgjaVG8RE+QMqR17M2i42hxGOb7da3B8vdSRHekffDd1ZWF7PFFw88DQoXJI3FdjXFAuzgZ9yS36oRYdt8muMs1fyVfPJBzrPcbm3g0/ysFhAsqX6+1pSVztPGPS3QijbHO2W7OVXycZhz3QGb6e1W3mSBvNdExPC5HBd3ZYzfADu13Gq0E434Zmz5ubaogvrnCCioNL9ygfMmo8HmAtor7SEF5kTqbmQPiQkIDmQY8/hVpEAEsFw==
+x-amz-target:AWSShineFrontendService_20170701.TranslateText
+
+content-type;host;x-amz-date;x-amz-security-token;x-amz-target
+10190fd449c926b34f3f314667ad64443f215827e3e3ac20ce31438fff3b6046
+DEBUG:botocore.auth:StringToSign:
+AWS4-HMAC-SHA256
+20220709T182752Z
+20220709/us-east-1/translate/aws4_request
+17591a7c2efa824a9687a7cab5682700d8064b145eac0bf05bca1f8281dcc0c4
+DEBUG:botocore.auth:Signature:
+f35db2573c4969eae4b6b56f97b0771516ec3668357bd90852febfb6e11d057a
+DEBUG:botocore.hooks:Event request-created.translate.TranslateText: calling handler <function add_retry_headers at 0x7f4046da6c20>
+DEBUG:botocore.endpoint:Sending http request: <AWSPreparedRequest stream_output=False, method=POST, url=https://translate.us-east-1.amazonaws.com/, headers={'X-Amz-Target': b'AWSShineFrontendService_20170701.TranslateText', 'Content-Type': b'application/x-amz-json-1.1', 'User-Agent': b'Boto3/1.24.22 Python/3.7.10 Linux/4.14.281-212.502.amzn2.x86_64 Botocore/1.27.22', 'X-Amz-Date': b'20220709T182752Z', 'X-Amz-Security-Token': b'IQoJb3JpZ2luX2VjEOP//////////wEaCXVzLWVhc3QtMSJHMEUCIQCxofSaFN/uqrHBPR+1xfgxnF9o5sNJL6alqSSqxuOW5wIgItHaJ137+KQpQFeKULHbbrZIhfWvEj5eS3X0Y5y9+Bgq6gMIHBAAGgw0MjAzNDEzODE0NDkiDEgGSe2JJLyhgHrl4CrHAxaZisfJ8pVEWI1u/kxpxe2i8Y+7mcXGJ+rQoSxMEHziLjEksw0GaI9sV4XG8t8zmiIe7Qp4ccw8h6WHEjnYNnGFeDxJDEavYONDizK8tlO9aJ3axEs126uNkYZObOmyus064yUqzsr5y9qnMQ4rpkmbeeGflWGrRvdu/NMSCNEt/5GiBE1N65cn9goskbdi5m3Gbp1eFj0keC/nO5DvHNGmklsv7K4oZSawKLA+StDSrAZ/ff5fbBwv1I8t+svXnAbuRO0rjFkbSHnTzRSsyzxU/TawI3AwuMQxox263baUSLkzNk/8qJ8JD6Ce877wranlBUEQoS31M5Th17IHtkOpzNcvSFm7sFo77s/H+oB4I8QqVGP1hQgdB7VK2GjSzCO+K5RzK476tRrdDsec5vFCC92nEoaR+d0Jn4D0i7ZXoMExSm8Sqs1u8Ngsj9L8k3arVVGtpNCXlN7log7SSC792/DdSOV+QxLLrtV2ffBgM4A41CXD1KXyNSYpMES8pUs0Us8kLxa/BRvehb7sophrRCgqUEdOzcCt0bbBpYSRSENvtZHDKpVyUO06tzU2mNjhE0jFDWHUY3cNYuIQdCMKVucjp28iMI/dppYGOpICQvmC5bMhfRkc7Z8mUhKVc/aaWqBtRr9W8Uk/SDkAEPQcsTXQWG5cslKkEAxRlyZ0qSHSw/8I9NAzwoBk8+2vqOe/bh1Mqgp5Or16ZzqmjrLqSl+XaSc8KbKUGGgjaVG8RE+QMqR17M2i42hxGOb7da3B8vdSRHekffDd1ZWF7PFFw88DQoXJI3FdjXFAuzgZ9yS36oRYdt8muMs1fyVfPJBzrPcbm3g0/ysFhAsqX6+1pSVztPGPS3QijbHO2W7OVXycZhz3QGb6e1W3mSBvNdExPC5HBd3ZYzfADu13Gq0E434Zmz5ubaogvrnCCioNL9ygfMmo8HmAtor7SEF5kTqbmQPiQkIDmQY8/hVpEAEsFw==', 'Authorization': b'AWS4-HMAC-SHA256 Credential=ASIAWDXSMPFERDZ5MVM7/20220709/us-east-1/translate/aws4_request, SignedHeaders=content-type;host;x-amz-date;x-amz-security-token;x-amz-target, Signature=f35db2573c4969eae4b6b56f97b0771516ec3668357bd90852febfb6e11d057a', 'amz-sdk-invocation-id': b'4cdb5b16-6192-4a11-99ef-6f403fe28500', 'amz-sdk-request': b'attempt=1', 'Content-Length': '275'}>
+DEBUG:botocore.httpsession:Certificate path: /home/ec2-user/.local/lib/python3.7/site-packages/botocore/cacert.pem
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): translate.us-east-1.amazonaws.com:443
+DEBUG:urllib3.connectionpool:https://translate.us-east-1.amazonaws.com:443 "POST / HTTP/1.1" 200 341
+DEBUG:botocore.parsers:Response headers: {'x-amzn-RequestId': '131c48f0-0507-4c79-a770-c6c3af75be83', 'Cache-Control': 'no-cache', 'Content-Type': 'application/x-amz-json-1.1', 'Content-Length': '341', 'Date': 'Sat, 09 Jul 2022 18:27:51 GMT'}
+DEBUG:botocore.parsers:Response body:
+b'{"SourceLanguageCode":"en","TargetLanguageCode":"fr","TranslatedText":"Par exemple, les entreprises de soins de sant\xc3\xa9 utilisent le cloud pour d\xc3\xa9velopper des traitements plus personnalis\xc3\xa9s pour les patients. Les soci\xc3\xa9t\xc3\xa9s de services financiers utilisent le cloud pour assurer la d\xc3\xa9tection et la pr\xc3\xa9vention des fraudes en temps r\xc3\xa9el."}'
+DEBUG:botocore.hooks:Event needs-retry.translate.TranslateText: calling handler <botocore.retryhandler.RetryHandler object at 0x7f40464a7550>
+DEBUG:botocore.retryhandler:No retry needed.
+INFO:root:The SourceLanguageCode and TargetLanguageCode are valid - proceeding
+DEBUG:botocore.hooks:Event choose-service-name: calling handler <function handle_service_name_alias at 0x7f404702d320>
+DEBUG:botocore.hooks:Event creating-client-class.translate: calling handler <function add_generate_presigned_url at 0x7f40474dbb00>
+DEBUG:botocore.endpoint:Setting translate timeout as (60, 60)
+DEBUG:botocore.client:Registering retry handlers for service: translate
+DEBUG:botocore.hooks:Event before-parameter-build.translate.TranslateText: calling handler <function generate_idempotent_uuid at 0x7f4046d9ecb0>
+DEBUG:botocore.hooks:Event before-call.translate.TranslateText: calling handler <function add_recursion_detection_header at 0x7f4046d9d9e0>
+DEBUG:botocore.hooks:Event before-call.translate.TranslateText: calling handler <function inject_api_version_header_if_needed at 0x7f4046da6560>
+DEBUG:botocore.endpoint:Making request for OperationModel(name=TranslateText) with params: {'url_path': '/', 'query_string': '', 'method': 'POST', 'headers': {'X-Amz-Target': 'AWSShineFrontendService_20170701.TranslateText', 'Content-Type': 'application/x-amz-json-1.1', 'User-Agent': 'Boto3/1.24.22 Python/3.7.10 Linux/4.14.281-212.502.amzn2.x86_64 Botocore/1.27.22'}, 'body': b'{"Text": "And video game makers are using the cloud to deliver online games to millions of players around the world.", "SourceLanguageCode": "en", "TargetLanguageCode": "fr"}', 'url': 'https://translate.us-east-1.amazonaws.com/', 'context': {'client_region': 'us-east-1', 'client_config': <botocore.config.Config object at 0x7f4046014e10>, 'has_streaming_input': False, 'auth_type': None}}
+DEBUG:botocore.hooks:Event request-created.translate.TranslateText: calling handler <bound method RequestSigner.handler of <botocore.signers.RequestSigner object at 0x7f40464a7050>>
+DEBUG:botocore.hooks:Event choose-signer.translate.TranslateText: calling handler <function set_operation_specific_signer at 0x7f4046d9eb90>
+DEBUG:botocore.auth:Calculating signature using v4 auth.
+DEBUG:botocore.auth:CanonicalRequest:
+POST
+/
+
+content-type:application/x-amz-json-1.1
+host:translate.us-east-1.amazonaws.com
+x-amz-date:20220709T182752Z
+x-amz-security-token:IQoJb3JpZ2luX2VjEOP//////////wEaCXVzLWVhc3QtMSJHMEUCIQCxofSaFN/uqrHBPR+1xfgxnF9o5sNJL6alqSSqxuOW5wIgItHaJ137+KQpQFeKULHbbrZIhfWvEj5eS3X0Y5y9+Bgq6gMIHBAAGgw0MjAzNDEzODE0NDkiDEgGSe2JJLyhgHrl4CrHAxaZisfJ8pVEWI1u/kxpxe2i8Y+7mcXGJ+rQoSxMEHziLjEksw0GaI9sV4XG8t8zmiIe7Qp4ccw8h6WHEjnYNnGFeDxJDEavYONDizK8tlO9aJ3axEs126uNkYZObOmyus064yUqzsr5y9qnMQ4rpkmbeeGflWGrRvdu/NMSCNEt/5GiBE1N65cn9goskbdi5m3Gbp1eFj0keC/nO5DvHNGmklsv7K4oZSawKLA+StDSrAZ/ff5fbBwv1I8t+svXnAbuRO0rjFkbSHnTzRSsyzxU/TawI3AwuMQxox263baUSLkzNk/8qJ8JD6Ce877wranlBUEQoS31M5Th17IHtkOpzNcvSFm7sFo77s/H+oB4I8QqVGP1hQgdB7VK2GjSzCO+K5RzK476tRrdDsec5vFCC92nEoaR+d0Jn4D0i7ZXoMExSm8Sqs1u8Ngsj9L8k3arVVGtpNCXlN7log7SSC792/DdSOV+QxLLrtV2ffBgM4A41CXD1KXyNSYpMES8pUs0Us8kLxa/BRvehb7sophrRCgqUEdOzcCt0bbBpYSRSENvtZHDKpVyUO06tzU2mNjhE0jFDWHUY3cNYuIQdCMKVucjp28iMI/dppYGOpICQvmC5bMhfRkc7Z8mUhKVc/aaWqBtRr9W8Uk/SDkAEPQcsTXQWG5cslKkEAxRlyZ0qSHSw/8I9NAzwoBk8+2vqOe/bh1Mqgp5Or16ZzqmjrLqSl+XaSc8KbKUGGgjaVG8RE+QMqR17M2i42hxGOb7da3B8vdSRHekffDd1ZWF7PFFw88DQoXJI3FdjXFAuzgZ9yS36oRYdt8muMs1fyVfPJBzrPcbm3g0/ysFhAsqX6+1pSVztPGPS3QijbHO2W7OVXycZhz3QGb6e1W3mSBvNdExPC5HBd3ZYzfADu13Gq0E434Zmz5ubaogvrnCCioNL9ygfMmo8HmAtor7SEF5kTqbmQPiQkIDmQY8/hVpEAEsFw==
+x-amz-target:AWSShineFrontendService_20170701.TranslateText
+
+content-type;host;x-amz-date;x-amz-security-token;x-amz-target
+6772ec31591ce14a729dbb7cfca74f29cc36fcb9179dff4250e4ca44d59bee82
+DEBUG:botocore.auth:StringToSign:
+AWS4-HMAC-SHA256
+20220709T182752Z
+20220709/us-east-1/translate/aws4_request
+f96daedeff7736b427d673560b158ab75608ccdd44ab645e897cac23c4984e3b
+DEBUG:botocore.auth:Signature:
+2291c79685c36723ae38cd7e91e00406e08612f1a2db2dfd5fbb2a6f098d5459
+DEBUG:botocore.hooks:Event request-created.translate.TranslateText: calling handler <function add_retry_headers at 0x7f4046da6c20>
+DEBUG:botocore.endpoint:Sending http request: <AWSPreparedRequest stream_output=False, method=POST, url=https://translate.us-east-1.amazonaws.com/, headers={'X-Amz-Target': b'AWSShineFrontendService_20170701.TranslateText', 'Content-Type': b'application/x-amz-json-1.1', 'User-Agent': b'Boto3/1.24.22 Python/3.7.10 Linux/4.14.281-212.502.amzn2.x86_64 Botocore/1.27.22', 'X-Amz-Date': b'20220709T182752Z', 'X-Amz-Security-Token': b'IQoJb3JpZ2luX2VjEOP//////////wEaCXVzLWVhc3QtMSJHMEUCIQCxofSaFN/uqrHBPR+1xfgxnF9o5sNJL6alqSSqxuOW5wIgItHaJ137+KQpQFeKULHbbrZIhfWvEj5eS3X0Y5y9+Bgq6gMIHBAAGgw0MjAzNDEzODE0NDkiDEgGSe2JJLyhgHrl4CrHAxaZisfJ8pVEWI1u/kxpxe2i8Y+7mcXGJ+rQoSxMEHziLjEksw0GaI9sV4XG8t8zmiIe7Qp4ccw8h6WHEjnYNnGFeDxJDEavYONDizK8tlO9aJ3axEs126uNkYZObOmyus064yUqzsr5y9qnMQ4rpkmbeeGflWGrRvdu/NMSCNEt/5GiBE1N65cn9goskbdi5m3Gbp1eFj0keC/nO5DvHNGmklsv7K4oZSawKLA+StDSrAZ/ff5fbBwv1I8t+svXnAbuRO0rjFkbSHnTzRSsyzxU/TawI3AwuMQxox263baUSLkzNk/8qJ8JD6Ce877wranlBUEQoS31M5Th17IHtkOpzNcvSFm7sFo77s/H+oB4I8QqVGP1hQgdB7VK2GjSzCO+K5RzK476tRrdDsec5vFCC92nEoaR+d0Jn4D0i7ZXoMExSm8Sqs1u8Ngsj9L8k3arVVGtpNCXlN7log7SSC792/DdSOV+QxLLrtV2ffBgM4A41CXD1KXyNSYpMES8pUs0Us8kLxa/BRvehb7sophrRCgqUEdOzcCt0bbBpYSRSENvtZHDKpVyUO06tzU2mNjhE0jFDWHUY3cNYuIQdCMKVucjp28iMI/dppYGOpICQvmC5bMhfRkc7Z8mUhKVc/aaWqBtRr9W8Uk/SDkAEPQcsTXQWG5cslKkEAxRlyZ0qSHSw/8I9NAzwoBk8+2vqOe/bh1Mqgp5Or16ZzqmjrLqSl+XaSc8KbKUGGgjaVG8RE+QMqR17M2i42hxGOb7da3B8vdSRHekffDd1ZWF7PFFw88DQoXJI3FdjXFAuzgZ9yS36oRYdt8muMs1fyVfPJBzrPcbm3g0/ysFhAsqX6+1pSVztPGPS3QijbHO2W7OVXycZhz3QGb6e1W3mSBvNdExPC5HBd3ZYzfADu13Gq0E434Zmz5ubaogvrnCCioNL9ygfMmo8HmAtor7SEF5kTqbmQPiQkIDmQY8/hVpEAEsFw==', 'Authorization': b'AWS4-HMAC-SHA256 Credential=ASIAWDXSMPFERDZ5MVM7/20220709/us-east-1/translate/aws4_request, SignedHeaders=content-type;host;x-amz-date;x-amz-security-token;x-amz-target, Signature=2291c79685c36723ae38cd7e91e00406e08612f1a2db2dfd5fbb2a6f098d5459', 'amz-sdk-invocation-id': b'83bb4809-6736-4041-9c2e-1e5177526233', 'amz-sdk-request': b'attempt=1', 'Content-Length': '174'}>
+DEBUG:botocore.httpsession:Certificate path: /home/ec2-user/.local/lib/python3.7/site-packages/botocore/cacert.pem
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): translate.us-east-1.amazonaws.com:443
+DEBUG:urllib3.connectionpool:https://translate.us-east-1.amazonaws.com:443 "POST / HTTP/1.1" 200 205
+DEBUG:botocore.parsers:Response headers: {'x-amzn-RequestId': '8cebeb99-0dab-4b5d-bce3-eb25a3d5f5ac', 'Cache-Control': 'no-cache', 'Content-Type': 'application/x-amz-json-1.1', 'Content-Length': '205', 'Date': 'Sat, 09 Jul 2022 18:27:51 GMT'}
+DEBUG:botocore.parsers:Response body:
+b'{"SourceLanguageCode":"en","TargetLanguageCode":"fr","TranslatedText":"Et les cr\xc3\xa9ateurs de jeux vid\xc3\xa9o utilisent le cloud pour proposer des jeux en ligne \xc3\xa0 des millions de joueurs dans le monde entier."}'
+DEBUG:botocore.hooks:Event needs-retry.translate.TranslateText: calling handler <botocore.retryhandler.RetryHandler object at 0x7f40460140d0>
+DEBUG:botocore.retryhandler:No retry needed.
